@@ -3,9 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Perfil;
+use App\Models\User;
 
-class PerfilController extends Controller
+class UserController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,7 +14,7 @@ class PerfilController extends Controller
      */
     public function index()
     {
-        return Perfil::all();
+        return User::all();
     }
 
     /**
@@ -46,7 +46,7 @@ class PerfilController extends Controller
      */
     public function show($id)
     {
-        return Perfil::find($id);
+        return User::find($id);
     }
 
     /**

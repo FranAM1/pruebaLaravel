@@ -1,6 +1,6 @@
 <?php
 
-use App\Http\Controllers\ProfileController, App\Http\Controllers\PerfilController;
+use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
 
@@ -29,6 +29,6 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-Route::get('/perfiles', [PerfilController::class, 'index']);
+
 
 require __DIR__.'/auth.php';

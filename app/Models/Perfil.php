@@ -10,8 +10,4 @@ class Perfil extends Model
     use HasFactory;
 
     protected $table = 'perfiles';
-
-    public function user(){
-        return $this->belongsTo(User::class);
-    }
 }
