@@ -19,5 +19,11 @@ class DatabaseSeeder extends Seeder
         User::factory(10)->create();
 
         Perfil::factory(10)->create();
+
+        $this->call([
+            CommentSeeder::class,
+            PostSeeder::class,
+            CommunitySeeder::class,
+        ]);
     }
 }

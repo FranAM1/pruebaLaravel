@@ -2,6 +2,8 @@
 
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\PerfilController, App\Http\Controllers\UserController, App\Http\Controllers\CommentController, App\Http\Controllers\PostController,
+App\Http\Controllers\CommunityController;
 
 
 /*
@@ -28,6 +30,20 @@ Route::middleware('auth')->group(function () {
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
+
+
+Route::get('/perfiles', [PerfilController::class, 'index']);
+Route::get('/usuarios', [UserController::class, 'index']);
+Route::get('/comunidades', [CommunityController::class, 'index']);
+Route::get('/posts', [PostController::class, 'index']);
+Route::get('/comentarios', [CommentController::class, 'index']);
+
+Route::get('/perfiles/{id}', [PerfilController::class, 'show']);
+Route::get('/usuarios/{id}', [UserController::class, 'show']);
+Route::get('/comunidades/{id}', [CommunityController::class, 'show']);
+Route::get('/posts/{id}', [PostController::class, 'show']);
+Route::get('/comentarios/{id}', [CommentController::class, 'show']);
+
 
 
 

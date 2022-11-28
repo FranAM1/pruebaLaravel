@@ -5,13 +5,13 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Perfil extends Model
+class Community extends Model
 {
     use HasFactory;
 
-    protected $table = 'perfiles';
+    protected $table = 'communities';
 
-    public function user(){
-        return $this->belongsTo(User::class);
+    public function post(){
+        return $this->hasMany(Post::class);
     }
 }
