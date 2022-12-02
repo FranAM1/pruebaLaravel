@@ -18,8 +18,7 @@ class PerfilFactory extends Factory
     public function definition()
     {
         return [
-            'phone' => fake()->phoneNumber(),
-            'user_id' => User::factory()->create()->id,
+            'phone' => fake()->phoneNumber()
         ];
     }
 }

@@ -7,7 +7,7 @@ use App\Models\User;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
-class CommunitySeeder extends Seeder
+class UserSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -16,10 +16,11 @@ class CommunitySeeder extends Seeder
      */
     public function run()
     {
-        Community::factory(5)->create();
+        //
+        User::factory(2)->create();
 
-        Community::factory()->has(User::factory())->create([
-            'name' => 'Nombre de prueba comunidades',
+        User::factory()->has(Community::factory())->create([
+            'name' => 'yo',
         ]);
     }
 }

@@ -42,7 +42,11 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
-    public function perfil(){
+    public function perfiles(){
         return $this->hasOne(Perfil::class);
+    }
+
+    public function communities(){
+        return $this->belongsToMany(Community::class);
     }
 }

@@ -11,7 +11,7 @@ class Post extends Model
 
     protected $table = 'posts';
 
-    public function community(){
+    public function communities(){
         return $this->belongsTo(Post::class);
     }
 

@@ -13,11 +13,11 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('perfiles', function (Blueprint $table) {
+        Schema::create('community_user', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
-            $table->foreignId('user_id')->nullable()->constrained();
-            $table->string('phone');
+            $table->foreignId('user_id')->constrained();
+            $table->foreignId('community_id')->constrained();
         });
     }
 
@@ -28,6 +28,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('perfiles');
+        Schema::dropIfExists('community_user');
     }
 };

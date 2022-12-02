@@ -11,7 +11,7 @@ class Perfil extends Model
 
     protected $table = 'perfiles';
 
-    public function user(){
+    public function users(){
         return $this->belongsTo(User::class);
     }
 }
