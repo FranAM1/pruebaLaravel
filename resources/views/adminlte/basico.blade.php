@@ -36,13 +36,13 @@
 
   <!-- Navbar -->
   <nav class="main-header navbar navbar-expand navbar-white navbar-light">
-    @include('adminlte._partials.navbar');
+    @include('adminlte._partials.navbar')
   </nav>
   <!-- /.navbar -->
 
   <!-- Main Sidebar Container -->
   <aside class="main-sidebar sidebar-dark-primary elevation-4">
-    @include('adminlte._partials.sidebar');
+    @include('adminlte._partials.sidebar')
   </aside>
 
   <!-- Content Wrapper. Contains page content -->
@@ -68,7 +68,7 @@
     <!-- Main content -->
     <section class="content">
       <div class="container-fluid">
-        @yield('content');
+        @yield('content')
       </div><!-- /.container-fluid -->
     </section>
     <!-- /.content -->

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\User;
+use Illuminate\Console\View\Components\Alert;
 
 class UserController extends Controller
 {
@@ -35,7 +36,20 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'username' => 'required|max:16',
+            'email' => 'required',
+            'password' => 'required',
+        ]);
+
+
+        User::factory()->create([
+            'name' => $request->username,
+            'email' => $request->email,
+            'password' => $request->password,
+        ]);
+
+        echo "Todo correcto";
     }
 
     /**

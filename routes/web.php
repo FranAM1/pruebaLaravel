@@ -5,7 +5,6 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PerfilController, App\Http\Controllers\UserController, App\Http\Controllers\CommentController, App\Http\Controllers\PostController,
 App\Http\Controllers\CommunityController;
 
-
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -18,8 +17,10 @@ App\Http\Controllers\CommunityController;
 */
 
 Route::get('/', function () {
-    return view('index');
+    return view('form');
 });
+
+Route::post('/usuarios', [UserController::class, 'store']);
 
 Route::get('/dashboard', function () {
     return view('dashboard');
